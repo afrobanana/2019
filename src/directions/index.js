@@ -33,7 +33,7 @@ export default class Directions extends PureComponent {
           </div>
         </div>
         <div className="maps box-container">
-          <Thumbnail className="box">
+          <Thumbnail className="box" height="450px">
             <a
               href="https://goo.gl/maps/ze6UTzuJNXLLP1d78"
               target="_blank"

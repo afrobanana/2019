@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 
 const THUMBNAIL_STYLE = {
-  height: '300px',
   lineHeight: 1,
   overflow: 'hidden',
   position: 'relative',
@@ -14,21 +13,27 @@ const THUMBNAIL_IMAGE_STYLE = {
   width: '100%',
 }
 
-const getThumbnailImageStyle = ({ offset = [0, 0] }) => {
+const getThumbnailStyle = ({ height='300px', }) => ({
+  ...THUMBNAIL_STYLE,
+  height,
+})
+
+
+const getThumbnailImageStyle = ({ offset = [0, 0], }) => {
   const [left, top] = offset
   return {
-    ...THUMBNAIL_IMAGE_STYLE,
-    left: left,
-    top: top,
+    ...THUMBNAIL_STYLE,
+    left,
+    top,
     transform: `translate(-${left}, -${top})`,
   }
 }
 
 export default class Thumbnail extends PureComponent {
   render() {
-    const { children, offset } = this.props
+    const { children, offset, height } = this.props
     return (
-      <div style={THUMBNAIL_STYLE}>
+      <div style={getThumbnailStyle({ height, })}>
         <div style={getThumbnailImageStyle({ offset })}>{children}</div>
       </div>
     )

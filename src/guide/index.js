@@ -10,7 +10,7 @@ export default class Guide extends PureComponent {
     return (
       <section className="guide">
         <h1>Your Guide to ABR</h1>
-        <Thumbnail offset={[0, '40%']}>
+        <Thumbnail offset={[0, '65%']} height="450px">
           <a href={mapImg} target="_blank" rel="noopener noreferrer">
             <img src={mapImg} alt="Location map" />
           </a>
