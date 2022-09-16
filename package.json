@@ -5,7 +5,7 @@
   "private": true,
   "homepage": "https://2019.afrobananarepublic.com",
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "dateformat": "^3.0.3",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
